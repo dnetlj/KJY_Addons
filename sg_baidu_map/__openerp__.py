@@ -1,20 +1,17 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Core',
+    'name': '百度地图开发演示',
     'category': 'smartgo',
     'sequence': 10,
-    'summary': 'SmartGo Core',
+    'summary': 'SmartGo Baidu Map',
     'website': 'https://www.odoo.com/page/website-builder',
     'version': '1.0',
-    'description': """
-SmartGo Addons Core Modules
-===========================
-
-        """,
+    'description': '',
     'depends': ['web', 'web_editor', 'web_planner'],
     'installable': True,
     'data': [
-        'views/res_users_view.xml',
+        'baidu_map_demo_view.xml',
     ],
-    'application': False,
+    'qweb': ['static/src/xml/*.xml'],
+    'application': True,
 }

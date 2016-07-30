@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'core',
+    'name': 'SaaS Base Setup',
     'category': 'smartgo',
-    'sequence': 50,
-    'summary': 'Build Your Enterprise Website',
+    'sequence': 20,
+    'summary': 'saas base setup',
     'website': 'https://www.odoo.com/page/website-builder',
     'version': '1.0',
     'description': """
@@ -31,5 +31,5 @@ SmartGo Addons Core Modules
     'qweb': [
         # 'static/src/xml/website.backend.xml'
     ],
-    'application': Flase,
+    'application': False,
 }

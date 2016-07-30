@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="assets_backend" name="baidu_map_assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/sg_baidu_map/static/src/css/demo.css">
+                <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=5lO5FEqADp5pEYxhhXYGd3HUokYSnu5r"/>
+                <script type="text/javascript" src="/sg_baidu_map/static/src/js/baidu_map_demo.js"/>
+            </xpath>
+        </template>
+
+        <record id="action_baidu_map_demo" model="ir.actions.client">
+            <field name="name">百度地图</field>
+            <field name="tag">baidu_map_demo</field>
+        </record>
+        <!--<record id="base.open_menu" model="ir.actions.todo">-->
+            <!--<field name="action_id" ref="action_notice_page"/>-->
+            <!--<field name="state">open</field>-->
+        <!--</record>-->
+
+        <menuitem id="notice_menu" name="百度地图" sequence="10" action="action_baidu_map_demo" />
+
+    </data>
+</openerp>
