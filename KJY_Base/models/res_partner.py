@@ -43,7 +43,7 @@ class ResPartner(models.Model):
         :param related_type:
         :return:
         '''
-        if credit_limit >= self.supplier_credit_limit_available:
+        if credit_limit <= self.supplier_credit_limit_available:
             self.supplier_credit_limit_available -= credit_limit
             return True
         else:
