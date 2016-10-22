@@ -28,7 +28,7 @@ class TestRules(TransactionCase):
 
         if self.supplier:
             self.assertEqual(self.supplier.supplier_credit_limit_available, 1000000.0)
-            self.assertEqual(self.supplier.supplier_credit_limit, 10000000.0)
+            self.assertEqual(self.supplier.supplier_credit_limit, 1000000.0)
 
             # 扣除额度测试
             self.supplier.deduction_supplier_credit_available(20000.0)
