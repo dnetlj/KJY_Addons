@@ -27,7 +27,7 @@ class TestRules(TransactionCase):
         """供应商的信用额度的测试"""
 
         if self.supplier:
-            self.assertEqual(self.supplier.supplier_credit_limit_available, 10000000.0)
+            self.assertEqual(self.supplier.supplier_credit_limit_available, 1000000.0)
             self.assertEqual(self.supplier.supplier_credit_limit, 10000000.0)
 
             # 扣除额度测试
