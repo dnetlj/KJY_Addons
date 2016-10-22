@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # © <2016> <TopOdoo Pengyb>
 
-from openerp import fields, models, api, exceptions
-from openerp.exceptions import Warning
+from odoo import fields, models, api, _
+from odoo.exceptions import Warning
 
 
 class ResPartner(models.Model):
@@ -47,5 +47,5 @@ class ResPartner(models.Model):
             self.supplier_credit_limit_available -= credit_limit
             return True
         else:
-            raise Warning(u'该供应商信用额度不足,目前可用额度: %s' % self.supplier_credit_limit_available)
+            raise Warning(_(u'该供应商信用额度不足,目前可用额度: %s' % self.supplier_credit_limit_available))
 
