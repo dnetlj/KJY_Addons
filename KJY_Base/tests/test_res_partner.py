@@ -24,18 +24,20 @@ class TestRules(TransactionCase):
         })
 
     def test_supplier_credit(self):
-        '''
-        供应商的信用额度的测试
-        :return:
-        '''
-        # 扣除额度测试
-        self.supplier.deduction_supplier_credit_available(20000)
-        self.assertEqual(self.supplier.supplier_credit_limit_available, 980000)
+        """供应商的信用额度的测试"""
 
-        # 恢复额度测试
-        self.supplier.revert_supplier_credit_available(10000)
-        self.assertEqual(self.supplier.supplier_credit_limit_available, 990000)
+        if self.supplier:
+            self.assertEqual(self.supplier.supplier_credit_limit_available, 10000000)
+            self.assertEqual(self.supplier.supplier_credit_limit, 10000000)
 
-        # 恢复额度测试（超额度限制）
-        self.supplier.revert_supplier_credit_available(20000)
-        self.assertEqual(self.supplier.supplier_credit_limit_available, 1000000)
+            # 扣除额度测试
+            self.supplier.deduction_supplier_credit_available(20000)
+            self.assertEqual(self.supplier.supplier_credit_limit_available, 980000)
+
+            # 恢复额度测试
+            self.supplier.revert_supplier_credit_available(10000)
+            self.assertEqual(self.supplier.supplier_credit_limit_available, 990000)
+
+            # 恢复额度测试（超额度限制）
+            self.supplier.revert_supplier_credit_available(20000)
+            self.assertEqual(self.supplier.supplier_credit_limit_available, 1000000)
