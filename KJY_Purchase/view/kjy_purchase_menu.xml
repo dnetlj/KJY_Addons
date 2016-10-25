@@ -5,5 +5,7 @@
         <menuitem id="menu_kjy_purchase_parents" name="采购"  sequence="1"/>
 
         <menuitem id="menu_kjy_purchase_children" name="采购" parent="menu_kjy_purchase_parents"/>
+
+        <menuitem id="menu_kjy_purchase_confing" name="设置" parent="menu_kjy_purchase_children"/>
     </data>
 </openerp>

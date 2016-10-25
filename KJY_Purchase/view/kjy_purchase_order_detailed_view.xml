@@ -12,7 +12,7 @@
             <field name="arch" type="xml">
                 <form string="采购单明细">
                     <sheet>
-                        <group>
+                        <group string="基本信息">
                             <field name="purchase_order_id"></field>
                             <field name="originator_hr_id"></field>
                             <field name="purchase_categories"></field>
@@ -20,7 +20,7 @@
                             <field name="purchase_quantity"></field>
                             <field name="storage_quantity"></field>
                             <field name="faulty_quantity"></field>
-                            <field name="remark"></field>x
+                            <field name="remark"></field>
                         </group>
                     </sheet>
                 </form>

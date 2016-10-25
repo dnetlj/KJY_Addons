@@ -13,9 +13,12 @@
     'depends': ['product', 'base', 'hr'],
     'data': [
         "view/kjy_purchase_menu.xml",
+        "view/sequences.xml",
         "view/kjy_purchase_order_view.xml",
         "view/kjy_purchase_order_detailed_view.xml",
         "view/kjy_purchase_order_payment_view.xml",
+        "view/kjy_purchase_order_payment_type_view.xml",
+        "view/kjy_purchase_order_cost_type_view.xml",
     ],
     'test': [
     ],

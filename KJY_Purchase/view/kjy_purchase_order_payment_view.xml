@@ -15,7 +15,7 @@
                         <group>
                             <field name="name"></field>
                             <field name="cashier_partner_id"></field>
-                            <field name="expense_type"></field>
+                            <field name="expense_type_id"></field>
                             <field name="expense_amount"></field>
                             <field name="apply_data"></field>
                             <field name="applicant_id"></field>

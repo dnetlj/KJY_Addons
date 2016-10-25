@@ -38,13 +38,23 @@
                         <group string="基本信息">
                             <group>
                                 <field name="supplier_id" required="1"></field>
+                                <field name="warehousing_id" required="1"></field>
+                                <field name="payment_type_id" required="1"
+                                       domian="[('active', '=', True),('supplier_id','=',supplier_id)]"></field>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+
+                        <group string="金额">
+                            <group>
                                 <field name="purchase_amount" required="1"></field>
-                                <field name="other_payable_amount" required="1"></field>
+                                <field name="other_payable_amount"></field>
                             </group>
                             <group>
                                 <field name="down_payments_amount" required="1"></field>
-                                <field name="unpaid_amount" required="1"></field>
-                                <field name="paid_amount" required="1"></field>
+                                <field name="unpaid_amount" readonly="1"></field>
+                                <field name="paid_amount" readonly="1"></field>
                             </group>
                         </group>
 
@@ -53,26 +63,31 @@
                                 <field name="detailed_ids" required="1" widget="one2many_list">
                                     <tree editable="bottom" widget="many2many_tags">
                                         <field name="originator_hr_id" required="1"></field>
-                                        <field name="purchase_categories" required="1"></field>
+                                        <field name="purchase_categories" readonly="1"></field>
                                         <field name="purchase_unit" readonly="1"></field>
                                         <field name="purchase_quantity" required="1"></field>
-                                        <field name="storage_quantity" required="1"></field>
-                                        <field name="faulty_quantity" required="1"></field>
+                                        <field name="storage_quantity"></field>
+                                        <field name="faulty_quantity"></field>
                                     </tree>
                                 </field>
+                            </page>
+                            <page String="付款信息">
+                                <group>
+                                    <field name="payment_id"></field>
+                                </group>
                             </page>
                             <page String="附件">
                                 <field name="attachment_ids" style="width:80%;" widget="many2many_binary"/>
                             </page>
                         </notebook>
 
-                        <group string="付款信息">
-                            <group>
-                                <field name="payment_id"></field>
-                            </group>
-                            <group>
-                            </group>
-                        </group>
+                        <!--<group string="付款信息">-->
+                        <!--<group>-->
+                        <!--<field name="payment_id"></field>-->
+                        <!--</group>-->
+                        <!--<group>-->
+                        <!--</group>-->
+                        <!--</group>-->
 
                         <group string="编制信息">
                             <group>
@@ -104,8 +119,8 @@
                     <field name="down_payments_amount"></field>
                     <field name="unpaid_amount"></field>
                     <field name="paid_amount"></field>
-                    <field name="warehousing"></field>
-                    <field name="payment_type"></field>
+                    <field name="warehousing_id"></field>
+                    <field name="payment_type_id"></field>
                     <field name="state"></field>
                 </tree>
             </field>

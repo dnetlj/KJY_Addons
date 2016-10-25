@@ -9,10 +9,10 @@ class KjyPurchaseOrderPayment(models.Model):
     _name = 'kjy.purchase.order.payment'
     _description = u'采购单付款单'
 
-    # purchase_order_id = fields.Many2one('kjy.purchase.order', string=u'采购单', index=True)
     name = fields.Char(string=u'付款单编号', default='/')
     cashier_partner_id = fields.Many2one('res.partner', string=u'收款单位', index=True)
-    expense_type = fields.Char(string=u'费用类型')
+    expense_type_id = fields.Many2one('kjy.purchase.order.cost.type', string=u'费用类型', index=True,
+                                      domian=[("active", '=', True)])
     expense_amount = fields.Float(string=u'费用金额')
     apply_data = fields.Date(string=u'申请日期')
     applicant_id = fields.Many2one('hr.employee', string=u'申请人', index=True)

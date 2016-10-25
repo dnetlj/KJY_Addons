@@ -5,3 +5,5 @@
 import kjy_purchase_order
 import kjy_purchase_order_detailed
 import kjy_purchase_order_payment
+import kjy_purchase_order_cost_type
+import kjy_purchase_order_payment_type
