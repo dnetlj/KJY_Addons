@@ -1,15 +1,19 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-
 {
     'name': u'采购',
-    'version': '0.1',
-    'website': 'https://www.movdy.com',
-    'category': u'采购',
-    "author": u"KJY Development Team（feast）",
+    'version': '1.0',
+    'summary': u'跨境翼的基础模块',
     'sequence': 1,
-    'summary': u'包括采购单、采购明细',
-    'description': u'包括采购单、采购明细',
+    'description': u"""
+模块说明
+====================
+包括采购单、采购明细
+
+   """,
+    'category': 'KJY',
+    'website': 'http://www.kjy.com',
+    'images': [],
     'depends': ['product', 'base', 'hr'],
     'data': [
         "view/kjy_purchase_menu.xml",
@@ -20,15 +24,13 @@
         "view/kjy_purchase_order_payment_type_view.xml",
         "view/kjy_purchase_order_cost_type_view.xml",
     ],
-    'test': [
-    ],
     'demo': [
-        'demo/toproerp_base_demo.xml',
     ],
     'qweb': [
-        'static/src/xml/*.xml',
+
     ],
     'installable': True,
-    'auto_install': True,
     'application': True,
+    'auto_install': False,
+    # 'post_init_hook': '_auto_install_l10n',
 }
