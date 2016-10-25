@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © <2016> <ToproERP liujing>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+    <data>
+
+
+        <record id="kjy_purchase_order_view_form" model="ir.ui.view">
+            <field name="name">kjy_purchase_order_view_form</field>
+            <field name="model">kjy.purchase.order</field>
+            <field name="arch" type="xml">
+                <form string="采购单">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title"
+                             style="width:100%;font-weight:900;font-family: Microsoft YaHei;">
+                            <h2>
+                                <strong>
+                                    <div>
+                                        <div style="float:left">
+                                            <!--<field name="order_type" readonly="1"/>-->
+                                            <label string="采购单"></label>
+                                        </div>
+                                        <div style="float:left;margin-left:5px;">
+                                            /
+                                        </div>
+                                        <div style="float:left;margin-left:10px;">
+                                            <field name="name" readonly="1"/>
+                                        </div>
+                                    </div>
+                                </strong>
+                            </h2>
+                        </div>
+
+                        <group string="基本信息">
+                            <group>
+                                <field name="supplier_id" required="1"></field>
+                                <field name="purchase_amount" required="1"></field>
+                                <field name="other_payable_amount" required="1"></field>
+                            </group>
+                            <group>
+                                <field name="down_payments_amount" required="1"></field>
+                                <field name="unpaid_amount" required="1"></field>
+                                <field name="paid_amount" required="1"></field>
+                            </group>
+                        </group>
+
+                        <notebook col="4">
+                            <page String="采购明细">
+                                <field name="detailed_ids" required="1" widget="one2many_list">
+                                    <tree editable="bottom" widget="many2many_tags">
+                                        <field name="originator_hr_id" required="1"></field>
+                                        <field name="purchase_categories" required="1"></field>
+                                        <field name="purchase_unit" readonly="1"></field>
+                                        <field name="purchase_quantity" required="1"></field>
+                                        <field name="storage_quantity" required="1"></field>
+                                        <field name="faulty_quantity" required="1"></field>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page String="附件">
+                                <field name="attachment_ids" style="width:80%;" widget="many2many_binary"/>
+                            </page>
+                        </notebook>
+
+                        <group string="付款信息">
+                            <group>
+                                <field name="payment_id"></field>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+
+                        <group string="编制信息">
+                            <group>
+                                <field name="originator_hr_id" readonly="1"></field>
+                            </group>
+                            <group>
+                                <field name="originator_company_id" readonly="1"></field>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="kjy_purchase_order_view_tree" model="ir.ui.view">
+            <field name="name">kjy_purchase_order_view_tree</field>
+            <field name="model">kjy.purchase.order</field>
+            <field name="arch" type="xml">
+                <tree string="采购单"><!--colors="red:now_time=='1';blue:now_time=='2'"-->
+                    <field name="name"></field>
+                    <field name="supplier_id"></field>
+                    <field name="originator_hr_id"></field>
+                    <field name="purchase_amount"></field>
+                    <field name="other_payable_amount"></field>
+                    <field name="down_payments_amount"></field>
+                    <field name="unpaid_amount"></field>
+                    <field name="paid_amount"></field>
+                    <field name="warehousing"></field>
+                    <field name="payment_type"></field>
+                    <field name="state"></field>
+                </tree>
+            </field>
+        </record>
+
+        <record id="kjy_purchase_order_action" model="ir.actions.act_window">
+            <field name="name">采购单</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kjy.purchase.order</field>
+            <field name="view_type">form</field>
+            <field name="context">{}</field>
+            <field name="domain">[]</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="kjy_purchase_order_menu" name="采购单" parent="menu_kjy_purchase_children"
+                  action="kjy_purchase_order_action"/>
+
+    </data>
+</openerp>

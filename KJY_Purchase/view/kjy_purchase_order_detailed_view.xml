@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © <2016> <ToproERP liujing>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+    <data>
+
+
+        <record id="kjy_purchase_order_detailed_view_form" model="ir.ui.view">
+            <field name="name">kjy_purchase_order_detailed_view_form</field>
+            <field name="model">kjy.purchase.order.detailed</field>
+            <field name="arch" type="xml">
+                <form string="采购单明细">
+                    <sheet>
+                        <group>
+                            <field name="purchase_order_id"></field>
+                            <field name="originator_hr_id"></field>
+                            <field name="purchase_categories"></field>
+                            <field name="purchase_unit"></field>
+                            <field name="purchase_quantity"></field>
+                            <field name="storage_quantity"></field>
+                            <field name="faulty_quantity"></field>
+                            <field name="remark"></field>x
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

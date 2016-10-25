@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © <2016> <ToproERP liujing>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+    <data>
+        <!--采购单-->
+        <record id="seq_sequences_purchase_order" model="ir.sequence">
+            <field name="name">seq_sequences_purchase_order</field>
+            <field name="company_id"></field>
+            <field name="code">kjy.purchase.order</field>
+            <field name="prefix">CGD%(year)s%(month)s%(day)s</field>
+            <field name="padding">4</field>
+        </record>
+        <!--采购单付款单-->
+        <record id="seq_sequences_purchase_order_payment" model="ir.sequence">
+            <field name="name">seq_sequences_purchase_order_payment</field>
+            <field name="company_id"></field>
+            <field name="code">kjy.purchase.order.payment</field>
+            <field name="prefix">FKD%(year)s%(month)s%(day)s</field>
+            <field name="padding">4</field>
+        </record>
+    </data>
+</openerp>

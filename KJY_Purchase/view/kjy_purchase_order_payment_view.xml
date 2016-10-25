@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © <2016> <ToproERP liujing>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+    <data>
+
+
+        <record id="kjy_purchase_order_payment_view_form" model="ir.ui.view">
+            <field name="name">kjy_purchase_order_payment_view_form</field>
+            <field name="model">kjy.purchase.order.payment</field>
+            <field name="arch" type="xml">
+                <form string="采购单付款单">
+                    <sheet>
+                        <group>
+                            <field name="name"></field>
+                            <field name="cashier_partner_id"></field>
+                            <field name="expense_type"></field>
+                            <field name="expense_amount"></field>
+                            <field name="apply_data"></field>
+                            <field name="applicant_id"></field>
+                            <field name="invoice_no"></field>
+                            <field name="invoice_test_data"></field>
+
+                            <field name="invoice_type"></field>
+                            <field name="invoice_amount"></field>
+                            <field name="invoice_inspection_man"></field>
+                            <field name="payment_date"></field>
+                            <field name="payment_amount"></field>
+                            <field name="drawee_id"></field>
+                            <field name="relate_document_type"></field>
+                            <field name="relevant_document_number"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+
+        <menuitem id="menu_kjy_purchase_parents" name="采购"  sequence="1"/>
+
+        <menuitem id="menu_kjy_purchase_children" name="采购" parent="menu_kjy_purchase_parents"/>
+    </data>
+</openerp>
