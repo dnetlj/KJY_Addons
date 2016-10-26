@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<openerp>
+<odoo>
     <data>
 
         <menuitem id="menu_kjy_purchase_parents" name="采购"  sequence="1"/>
@@ -8,4 +8,4 @@
 
         <menuitem id="menu_kjy_purchase_confing" name="设置" parent="menu_kjy_purchase_children"/>
     </data>
-</openerp>
+</odoo>

@@ -2,7 +2,7 @@
 <!-- © <2016> <ToproERP liujing>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 
-<openerp>
+<odoo>
     <data>
         <!--采购单-->
         <record id="seq_sequences_purchase_order" model="ir.sequence">
@@ -21,4 +21,4 @@
             <field name="padding">4</field>
         </record>
     </data>
-</openerp>
+</odoo>

@@ -2,7 +2,7 @@
 <!-- © <2016> <ToproERP liujing>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 
-<openerp>
+<odoo>
     <data>
 
         <record id="kjy_purchase_order_payment_type_view_form" model="ir.ui.view">
@@ -47,4 +47,4 @@
                   action="kjy_purchase_order_payment_type_action"/>
 
     </data>
-</openerp>
+</odoo>

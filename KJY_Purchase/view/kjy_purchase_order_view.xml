@@ -2,7 +2,7 @@
 <!-- © <2016> <ToproERP liujing>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 
-<openerp>
+<odoo>
     <data>
 
 
@@ -140,4 +140,4 @@
                   action="kjy_purchase_order_action"/>
 
     </data>
-</openerp>
+</odoo>
