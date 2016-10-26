@@ -33,7 +33,7 @@ class KjyPurchaseOrder(models.Model):
         [('draft', u'草稿'), ('to_be_signed', u'待签合同'), ('down_payment', u'待付首付款'), ('to_be_shipped', u'待发货'),
          ('stay_in_port', u'待到港'), ('pending_delivery', u'待提货'), ('to_be_cleared', u'待清关'),
          ('to_be_in_storage', u'待入库'), ('end_of_payment', u'待付尾款'), ('stay_clean', u'待两清'),
-         ('has_two', u'已两清')], string=u'状态', default='draft')
+         ('has_two', u'已两清')], string=u'状态', default='draft', track_visibility="onchange")
     warehousing_id = fields.Char(string=u'入库仓库')
     payment_type_id = fields.Many2one('kjy.purchase.order.payment.type', string=u'付款类型', index=True)
     detailed_ids = fields.One2many('kjy.purchase.order.detailed', 'purchase_order_id', string=u'采购明细')
