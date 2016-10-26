@@ -3,13 +3,12 @@
 {
     'name': u'采购',
     'version': '1.0',
-    'summary': u'跨境翼的基础模块',
+    'summary': u'跨境翼的采购模块',
     'sequence': 1,
     'description': u"""
 模块说明
 ====================
 包括采购单、采购明细
-
    """,
     'category': 'KJY',
     'website': 'http://www.kjy.com',
